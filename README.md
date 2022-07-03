@@ -40,6 +40,7 @@ import catppuccin
 config.load_autoconfig()
 
 # set the flavour you'd like to use
+# valid options are 'mocha', 'macchiato', 'frappe', and 'latte'
 catppuccin.setup(c, 'mocha')
 ```
 
