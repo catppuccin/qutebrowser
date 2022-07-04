@@ -12,7 +12,7 @@
 </p>
 
 <p align="center">
-	<img src="https://raw.githubusercontent.com/nekowinston/ctp-qutebrowser/main/assets/screenshot.png"/>
+	<img src="https://raw.githubusercontent.com/catppuccin/qutebrowser/main/assets/screenshot.png"/>
 </p>
 
 ## Usage
@@ -24,11 +24,11 @@
 
 ```sh
 # Linux
-$ git clone https://github.com/nekowinston/ctp-qutebrowser.git ~/.config/qutebrowser/catppuccin
+$ git clone https://github.com/catppuccin/qutebrowser.git ~/.config/qutebrowser/catppuccin
 # macOS
-$ git clone https://github.com/nekowinston/ctp-qutebrowser.git ~/.qutebrowser/catppuccin
+$ git clone https://github.com/catppuccin/qutebrowser.git ~/.qutebrowser/catppuccin
 # windows
-$ git clone https://github.com/nekowinston/ctp-qutebrowser.git $LOCALAPPDATA/qutebrowser/config/catppuccin
+$ git clone https://github.com/catppuccin/qutebrowser.git $LOCALAPPDATA/qutebrowser/config/catppuccin
 ```
 
 3. Make sure your `config.py` contains:
