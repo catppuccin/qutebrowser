@@ -17,38 +17,53 @@
 
 ## Usage
 
-1. Find out where the qutebrowser stores its `config` directory for your OS.<br/>
-   Run `:version`, and take a look at `Paths: config` to find out.
+- Manual config
 
-2. Clone this repo into that `config` directory:
+  1. Find out where the qutebrowser stores its `config` directory for your OS.<br/>
+     Run `:version`, and take a look at `Paths: config` to find out.
+  2. Clone this repo into that `config` directory:
+  ```sh
+  # Linux
+  $ git clone https://github.com/catppuccin/qutebrowser.git ~/.config/qutebrowser/catppuccin
+  # macOS
+  $ git clone https://github.com/catppuccin/qutebrowser.git ~/.qutebrowser/catppuccin
+  # windows
+  $ git clone https://github.com/catppuccin/qutebrowser.git $LOCALAPPDATA/qutebrowser/config/catppuccin
+  ```
+  3. Make sure your `config.py` contains:
+  ```python
+  import catppuccin
 
-```sh
-# Linux
-$ git clone https://github.com/catppuccin/qutebrowser.git ~/.config/qutebrowser/catppuccin
-# macOS
-$ git clone https://github.com/catppuccin/qutebrowser.git ~/.qutebrowser/catppuccin
-# windows
-$ git clone https://github.com/catppuccin/qutebrowser.git $LOCALAPPDATA/qutebrowser/config/catppuccin
-```
+  # load your autoconfig, use this if the rest of your config is empty!
+  config.load_autoconfig()
 
-3. Make sure your `config.py` contains:
+  # set the flavour you'd like to use
+  # valid options are 'mocha', 'macchiato', 'frappe', and 'latte'
+  # third (optional, default is False) param enable same colors of menu rows
+  catppuccin.setup(c, 'mocha', True)
+  ```
 
-```python
-import catppuccin
+- Let qutebrowser manage your themes.
 
-# load your autoconfig, use this if the rest of your config is empty!
-config.load_autoconfig()
-
-# set the flavour you'd like to use
-# valid options are 'mocha', 'macchiato', 'frappe', and 'latte'
-catppuccin.setup(c, 'mocha')
-```
+  - Insert in your `config.py` the next code:
+  ```python
+  if not os.path.exists(config.configdir / "theme.py"):
+      theme = "https://raw.githubusercontent.com/catppuccin/qutebrowser/main/setup.py"
+          with urlopen(theme) as themehtml:
+              with open(config.configdir / "theme.py", "a") as file:
+                  file.writelines(themehtml.read().decode("utf-8"))
+  if os.path.exists(config.configdir / "theme.py"):
+      import theme
+      theme.setup(c, 'mocha', True)
+  ```
+  - Remove from your `.qutebrowser` directory your current theme and reload `config.py`
 
 4. Done!
 
 ## 💝 Thanks to
 
 -   [winston](https://github.com/nekowinston)
+-   [iruzo](https://github.com/iruzo)
 
 &nbsp;
 
