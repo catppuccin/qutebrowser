@@ -1,7 +1,7 @@
 # vim:fileencoding=utf-8:foldmethod=marker
 
 
-def setup(c, flavour):
+def setup(c, flavour, samecolorrows = False):
     palette = {}
 
     # flavours {{{
@@ -132,11 +132,13 @@ def setup(c, flavour):
     c.colors.completion.category.border.top = palette["overlay2"]
     ## Foreground color of completion widget category headers.
     c.colors.completion.category.fg = palette["green"]
-
-    ## Background color of the completion widget for even rows.
-    c.colors.completion.even.bg = palette["mantle"]
-    ## Background color of the completion widget for odd rows.
-    c.colors.completion.odd.bg = palette["crust"]
+    ## Background color of the completion widget for even and odd rows.
+    if samecolorrows:
+        c.colors.completion.even.bg = palette["mantle"]
+        c.colors.completion.odd.bg = c.colors.completion.even.bg
+    else:
+        c.colors.completion.even.bg = palette["mantle"]
+        c.colors.completion.odd.bg = palette["crust"]
     ## Text color of the completion widget.
     c.colors.completion.fg = palette["subtext0"]
 
@@ -341,4 +343,8 @@ def setup(c, flavour):
 
     c.colors.contextmenu.selected.bg = palette["overlay0"]
     c.colors.contextmenu.selected.fg = palette["rosewater"]
+    # }}}
+
+    # background color for webpages {{{
+    c.colors.webpage.bg = palette["base"]
     # }}}
