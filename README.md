@@ -1,23 +1,25 @@
 <h3 align="center">
-	<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/logos/exports/1544x1544_circle.png" width="100" alt="Logo"/><br/>
-	<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png" height="30" width="0px"/>
-	Catppuccin for <a href="https://github.com/qutebrowser/qutebrowser">qutebrowser</a>
-	<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png" height="30" width="0px"/>
+  <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/logos/exports/1544x1544_circle.png" width="100" alt="Logo"/><br/>
+  <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png" height="30" width="0px"/>
+  Catppuccin for <a href="https://github.com/qutebrowser/qutebrowser">qutebrowser</a>
+  <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png" height="30" width="0px"/>
 </h3>
 
 <p align="center">
-	<a href="https://github.com/catppuccin/qutebrowser/stargazers"><img src="https://img.shields.io/github/stars/catppuccin/qutebrowser?colorA=363a4f&colorB=b7bdf8&style=for-the-badge"></a>
-	<a href="https://github.com/catppuccin/qutebrowser/issues"><img src="https://img.shields.io/github/issues/catppuccin/qutebrowser?colorA=363a4f&colorB=f5a97f&style=for-the-badge"></a>
-	<a href="https://github.com/catppuccin/qutebrowser/contributors"><img src="https://img.shields.io/github/contributors/catppuccin/qutebrowser?colorA=363a4f&colorB=a6da95&style=for-the-badge"></a>
+  <a href="https://github.com/catppuccin/qutebrowser/stargazers"><img src="https://img.shields.io/github/stars/catppuccin/qutebrowser?colorA=363a4f&colorB=b7bdf8&style=for-the-badge"></a>
+  <a href="https://github.com/catppuccin/qutebrowser/issues"><img src="https://img.shields.io/github/issues/catppuccin/qutebrowser?colorA=363a4f&colorB=f5a97f&style=for-the-badge"></a>
+  <a href="https://github.com/catppuccin/qutebrowser/contributors"><img src="https://img.shields.io/github/contributors/catppuccin/qutebrowser?colorA=363a4f&colorB=a6da95&style=for-the-badge"></a>
 </p>
 
 <p align="center">
-	<img src="https://raw.githubusercontent.com/catppuccin/qutebrowser/main/assets/screenshot.png"/>
+  <img src="https://raw.githubusercontent.com/catppuccin/qutebrowser/main/assets/screenshot.png"/>
 </p>
 
 ## Usage
 
-### Manual config
+There are two ways to install & manage this theme:
+
+### Manual config:
 
 1. Find out where the qutebrowser stores its `config` directory for your OS.<br/>
    Run `:version`, and take a look at `Paths: config` to find out.
@@ -48,9 +50,9 @@ catppuccin.setup(c, 'mocha', True)
 
 4. Done!
 
-### Let qutebrowser manage your themes.
+### Let qutebrowser manage your themes:
 
-1. Insert in the following code into your `config.py`:
+1. Insert the following code into your `config.py`:
 
 ```python
 import os
@@ -61,9 +63,9 @@ config.load_autoconfig()
 
 if not os.path.exists(config.configdir / "theme.py"):
     theme = "https://raw.githubusercontent.com/catppuccin/qutebrowser/main/setup.py"
-        with urlopen(theme) as themehtml:
-            with open(config.configdir / "theme.py", "a") as file:
-                file.writelines(themehtml.read().decode("utf-8"))
+    with urlopen(theme) as themehtml:
+        with open(config.configdir / "theme.py", "a") as file:
+            file.writelines(themehtml.read().decode("utf-8"))
 
 if os.path.exists(config.configdir / "theme.py"):
     import theme
@@ -80,13 +82,13 @@ if os.path.exists(config.configdir / "theme.py"):
 &nbsp;
 
 <p align="center">
-	<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" />
+  <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" />
 </p>
 
 <p align="center">
-	Copyright &copy; 2021-present <a href="https://github.com/catppuccin" target="_blank">Catppuccin Org</a>
+  Copyright &copy; 2021-present <a href="https://github.com/catppuccin" target="_blank">Catppuccin Org</a>
 </p>
 
 <p align="center">
-	<a href="https://github.com/catppuccin/catppuccin/blob/main/LICENSE"><img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=License&message=MIT&logoColor=d9e0ee&colorA=363a4f&colorB=b7bdf8"/></a>
+  <a href="https://github.com/catppuccin/catppuccin/blob/main/LICENSE"><img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=License&message=MIT&logoColor=d9e0ee&colorA=363a4f&colorB=b7bdf8"/></a>
 </p>
