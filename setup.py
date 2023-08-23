@@ -186,7 +186,7 @@ def setup(c, flavour, samecolorrows = False):
     c.hints.border = "1px solid " + palette["mantle"]
 
     ## Font color for the matched part of hints.
-    c.colors.hints.match.fg = palette["subtext1"]
+    c.colors.hints.match.fg = palette["rosewater"]
     # }}}
 
     # keyhints {{{
