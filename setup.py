@@ -151,9 +151,9 @@ def setup(c, flavour, samecolorrows = False):
     ## Foreground color of the selected completion item.
     c.colors.completion.item.selected.fg = palette["text"]
     ## Foreground color of the selected completion item.
-    c.colors.completion.item.selected.match.fg = palette["rosewater"]
+    c.colors.completion.item.selected.match.fg = palette["peach"]
     ## Foreground color of the matched text in the completion.
-    c.colors.completion.match.fg = palette["text"]
+    c.colors.completion.match.fg = palette["peach"]
 
     ## Color of the scrollbar in completion view
     c.colors.completion.scrollbar.bg = palette["crust"]
