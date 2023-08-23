@@ -294,7 +294,7 @@ def setup(c, flavour, samecolorrows = False):
     ## Foreground color of the statusbar in private browsing mode.
     c.colors.statusbar.private.fg = palette["subtext1"]
     ## Background color of the statusbar in private browsing + command mode.
-    c.colors.statusbar.command.private.bg = palette["base"]
+    c.colors.statusbar.command.private.bg = palette["crust"]
     ## Foreground color of the statusbar in private browsing + command mode.
     c.colors.statusbar.command.private.fg = palette["subtext1"]
 
