@@ -322,6 +322,10 @@ def setup(c, flavour, samecolorrows = False):
     ##	 - hsl: Interpolate in the HSL color system.
     ##	 - none: Don't show a gradient.
     c.colors.tabs.indicator.system = "none"
+    ## Color gradient start for the tab indicator.
+    c.colors.tabs.indicator.start = palette["blue"]
+    ## Color gradient end for the tab indicator.
+    c.colors.tabs.indicator.stop = palette["green"]
 
     # ## Background color of selected even tabs.
     c.colors.tabs.selected.even.bg = palette["base"]
